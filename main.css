@@ -34,3 +34,54 @@ h3 {
   letter-spacing: 1px;
   margin-bottom: 6rem;
 }
+
+.intro {
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+    background-size: 100%;
+    height: 20rem;
+}
+.intro .title {
+    margin-bottom: 5.9rem;
+}
+.intro .title h1 {
+    background: rgba(63, 72, 73, 0.35);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+}
+.intro .title h2 {
+    background: rgba(63, 72, 73, 0.35);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+}
+
+.main-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.main-navigation ul li {
+    display: block;
+    float: left;
+    width: 20%;
+}
+.main-navigation ul li a {
+    line-height: 1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: margin-top 0.5s ease;
+    display: block;
+    height: 10rem;
+    background: #3f4849;
+    border: 1px solid #333b3b;
+    text-decoration: none;
+    color: #fff;
+    padding-top: 4rem;
+}
+.main-navigation ul li a:hover {
+    transition: margin-top 0.5s ease;
+    margin-top: -1.5rem;
+    background: #394142;
+}
