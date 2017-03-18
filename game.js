@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//画布局
+//布局
 var canvas = document.getElementById("myCanvas");
 //获取2D图形
 var ctx = canvas.getContext("2d");
@@ -15,23 +15,23 @@ var y = canvas.height-30;
 //球每10毫米在水平方向移动像素数量
 var dx = 2;
 var dy = -2;
-//挡板高度,宽度
+//挡板高度,宽度 height
 var paddleHeight = 10;
 var paddleWidth = 75;
-//挡板初始位置
+//挡板初始位置 initial location
 var paddleX = (canvas.width-paddleWidth)/2;
 //左右键检测
 var rightPressed = false;
 var leftPressed = false;
-//砖块行列
+//砖行列
 var brickRowCount = 3;
 var brickColumnCount = 5;
-//砖块高度宽度
+//砖高度宽度
 var brickWidth = 75;
 var brickHeight = 20;
-//砖块间距
+//砖间距
 var brickPadding = 10;
-//砖块距离上边和左边的距离
+//砖距离上边和左边的距离
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = document.getElementById("score").innerHTML;;
@@ -100,7 +100,7 @@ function drawPaddle() {
     ctx.closePath();
 }
 
-//砖块儿图
+//砖图
 function drawBricks() {
     for(c=0; c<brickColumnCount; c++) {
         for(r=0; r<brickRowCount; r++) {
@@ -111,7 +111,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                //砖块颜色
+                //砖颜色
                 ctx.fillStyle = "#DD4800";
                 ctx.fill();
                 ctx.closePath();
@@ -146,3 +146,39 @@ function collisionDetection() {
         }
     }
 }
+//Main function,一个一个调用以上函数
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBricks();
+    drawBall();
+    drawPaddle();
+    collisionDetection();
+    
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+        dx = -dx;
+    }
+    if(y + dy < ballRadius) {
+        dy = -dy;
+    }
+    else if(y + dy > canvas.height-ballRadius) {
+        if(x > paddleX && x < paddleX + paddleWidth) {
+            dy = -dy;
+        }
+        else {
+            alert("GAME OVER");
+            document.location.reload();
+        }
+    }
+    
+    if(rightPressed && paddleX < canvas.width-paddleWidth) {
+        paddleX += 7;
+    }
+    else if(leftPressed && paddleX > 0) {
+        paddleX -= 7;
+    }
+    
+    x += dx;
+    y += dy;
+}
+
+setInterval(draw, 10);

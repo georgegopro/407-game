@@ -85,3 +85,42 @@ h3 {
     margin-top: -1.5rem;
     background: #394142;
 }
+.button {
+    background: #3D4C53;
+    margin : 20px auto;
+    width : 200px;
+    height : 50px;
+    overflow: hidden;
+    text-align : center;
+    transition : .2s;
+    cursor : pointer;
+}
+.btnTwo {
+    position : relative;
+    width : 200px;
+    height : 100px;
+    margin-top: -100px;
+    padding-top: 2px;
+    background : #26A69A;
+    left : -250px;
+    transition : .3s;
+}
+.btnText {
+    color : white;
+    transition : .3s;
+}
+.btnText2 {
+    margin-top : 63px;
+    margin-right : -130px;
+    color : #FFF;
+}
+.button:hover .btnTwo{
+    left: -130px;
+}
+.button:hover .btnText{
+    margin-left : 65px;
+}
+.button:active {
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.4);
+    
+}
