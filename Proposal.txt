@@ -1,0 +1,36 @@
+CIS407 Project Proposal
+Winter/2017
+Project Title:
+Improve the game performance and features.
+Responsible Person:
+Yuan Wang
+Contact Information:
+yuanw@cs.uoregon.edu
+
+Brief Project Description
+This project focus on how to make web-game performance faster, and will create some efficiency
+feature that help user easy to control. Through the discovery, planning, designing, 
+developing and testing process, I will ensure a successful outcome. My process will starts
+with step 0.
+Step 0
+	Analysis and Planning
+	Information Architecture
+	Technical Design
+Step 1
+	Graphic and User Interface Design
+	Content Creation
+	Implementation
+	Testing performance
+	Documentation
+	Ask user to get feedback
+	Launch
+Features:
+Home page
+	Home page design
+Login system
+Create an account
+About us
+Rank system
+Count number
+Change background
+

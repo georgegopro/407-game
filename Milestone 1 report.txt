@@ -1,0 +1,25 @@
+//CIS407 Winter term 17
+Yuan Wang
+
+Milestone 1 Report
+
+After I realize project proposal is difficult to achieve, so I decide to make a new project.
+In this milestone I am trying to develop a single-player bash-brick game. The player 
+control their bash-board on the same machine using keyboard inputs. There should be at 
+least one score item on the playfield. A player scores when his or her success to hit 
+the brick and never let the ball miss the bash-board, and the score will increase by 
+success hitting one unit brick. The game end when bash-board miss the ball.
+?	
+Client:
+?	1.Text fields to specify the player¡¯s IDs
+?	2.One Bash-board control the ball movement by different keyboard inputs
+?	3.The score of the single player
+
+
+The challenge is working a project by an individual, I must have ability to work without
+ constant supervision, and the ability to see each error and fix them, and the ability 
+of programming skill. Also the difficulty for the project is the deliverables, I should 
+turn this project in before the due date. And this is my first time to write a mini 
+game with HTML language. 
+Blocking process:
+Issue with sign in system.
